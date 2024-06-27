@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>pagina principal</title>
+    <script src="../JS/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            var evento=document.getElementById("a")
+            evento.addEventListener("mouseover",cambiaE)
+            var imagen=document.querySelectorAll("img")
+            for(var p=0;p<imagen.length;p++){
+                imagen[p].addEventListener("mouseover",cambiaI)
+                imagen[p].addEventListener("mouseout",cambiaR)
+            }
+            document.getElementById("boton")
+            .addEventListener("click",Esconder)
+        })
+        $(document).ready(function(){
+        $("#flip").mouseover(function(){
+       $("#panel").slideDown(2000);
+   });
+       $("#stop").click(function(){
+        $("#panel").stop();
+   });
+ });
+        
+        function cambiaI(e){
+            if(e.target==img1){
+                 $("#img1").attr("src","../img/1.jpg")
+                }
+        }
+        function cambiaR(e){
+            if(e.target==img1){
+                 $("#img1").attr("src","../img/ciclismo.webp")
+                }
+        }
+        function cambiaE() {
+            $(".nombre").toggleClass("nombre2")
+        }
+        function cambiaA() {
+            $(".nombre").removeClass("nombre2")
+        }
+        
+        
+    </script>
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <ul class="etiquetas">
+            <li class="niveles"><a href="index.html">inicio</a> </li>
+            <li class="niveles"><a href="categorias.html">categorias</a> </li>
+            <li class="niveles"><a href="contactanos.html">contactanos</a> </li>
+        </ul>
+    </nav>
+    <header>
+
+
+        <img class="logo" id="img1" src="../img/ciclismo.webp" alt="bici">
+        <h1 class="nombre" id="a">Rutas de ciclismo</h1>
+    </header>
+
+    <main>
+
+        <section id="contenido_principal">
+            <div id="flip">Informacion </div>
+            <div id="panel">Mi pagina
+                <p style="text-align: center;">
+                    Documento creado para ciclistas de bogota donde podran ver varias de las rutas de ciclismo para
+                    que puedas escoger cual quieres recorrer, donde veras varias reseñas y experiencias de la ruta que
+                    escojas, aparte de poder ver las rutas y el recorrido desde la ciudad de bogota
+                    </p>
+            </div>
+           
+            <img  id="bicit" src="../img/ciclismo.jpeg" alt="">
+        </section>
+
+
+
+        <div class="cards_container">
+            <!--ficha alto del vino-->
+            <div class="card">
+                <div class="face front">
+                    <img class="imagen" src="../img/alto al vino.jpg " alt="">
+                    <h3>alto del vino</h3>
+                </div>
+                <div class="face back">
+                    <h3>conoce mi ruta</h3>
+                    <p>conoceras las rutas junto con su recorrido su altitud y su dificultad de cada ruta  </p>
+                    <div class="link">
+                        <a href="categorias.html#alto_del_vino">mira el contenido </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="face front">
+                    <img class="imagen" src="../img/alto de la arepa.jpg" alt="">
+                    <h3>alto de la arepa </h3>
+                </div>
+                <div class="face back">
+                    <h3>conoce mi ruta</h3>
+                    <p>conoceras las rutas junto con su recorrido su altitud y su dificultad de cada ruta  </p>
+                    <div class="link">
+                        <a href="categorias.html#alto_de_arepa">mira el contenido </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face front">
+                    <img class="imagen" src="../img/altodepatios.jpg" alt="">
+                    <h3>alto de patios</h3>
+                </div>
+                <div class="face back">
+                    <h3>conoce mi ruta</h3>
+                    <p>conoceras las rutas junto con su recorrido su altitud y su dificultad de cada ruta  </p>
+                    <div class="link">
+                        <a href="categorias.html#alto_de_patios">mira el contenido </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="face front">
+                    <img class="imagen" src="../img/la cuchilla.jpg" alt="">
+                    <h3>alto de la cuchilla</h3>
+                </div>
+                <div class="face back">
+                    <h3>conoce mi ruta</h3>
+                    <p>conoceras las rutas junto con su recorrido su altitud y su dificultad de cada ruta  </p>
+                    <div class="link">
+                        <a href="categorias.html#la_cuchilla">mira el contenido</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face front">
+                    <img class="imagen" src="../img/represa de sisga.jpg" alt="">
+                    <h3>represa sisga</h3>
+                </div>
+                <div class="face back">
+                    <h3>conoce mi ruta</h3>
+                    <p>conoceras las rutas junto con su recorrido su altitud y su dificultad de cada ruta  </p>
+                    <div class="link">
+                        <a href="categorias.html#represa_sisga">mira el contenido</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
